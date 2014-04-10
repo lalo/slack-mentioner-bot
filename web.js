@@ -22,7 +22,7 @@ app.post('/', function(req, res) {
             };
         }
 
-        words = hook.text.split("\\s+");
+        words = hook.text.split(/\s+/g);
 
         for (index = 0; index < words.length; ++index) {
             if (MEMBERS.hasOwnProperty(words[index])) {
