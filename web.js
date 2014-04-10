@@ -11,7 +11,7 @@ app.use(logfmt.requestLogger());
 app.use(bodyParser());
 
 var MEMBERS = {"eduardo":"@eduardo"};
-var BOTNAME = "webhook";
+var BOTNAME = "slackbot";
 
 app.post('/', function(req, res) {
     var reply = slack.respond(req.body,function(hook) {
