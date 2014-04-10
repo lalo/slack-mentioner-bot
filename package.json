@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/CodeandoMexico/slack-mentioner-bot.git"
+    "url": "https://github.com/lalo/slack-mentioner-bot.git"
   },
   "keywords": [
     "slack",
@@ -19,7 +19,7 @@
     "auto"
   ],
   "author": "Eduardo Salinas",
-  "license": "MIT",
+  "license": “AGPLv3”,
   "dependencies": {
     "body-parser": "^1.0.1",
     "express": "^4.0.0",
