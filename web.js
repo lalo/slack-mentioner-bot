@@ -20,7 +20,9 @@ var MEMBERS = { "eduardo":"@eduardo",
                 "mike":"@miguel",
                 "juanpa":"@juanpabloe",
                 "poguez":"@poguez",
-                "juan":"@juanpabloe"
+                "juan":"@juanpabloe",
+                "jp":"@juanpabloe",
+                "channel":"@channel"
               };
 var BOTNAME = "slackbot";
 
