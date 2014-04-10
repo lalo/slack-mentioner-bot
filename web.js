@@ -31,7 +31,8 @@ app.post('/', function(req, res) {
         }
 
         return {
-            text: hook.user_name + ": " + words.join(" ")
+            text: hook.user_name + ": " + words.join(" "),
+            link_names: 1
         };
 
     });
