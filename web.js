@@ -4,7 +4,7 @@ var logfmt = require("logfmt");
 var app = express();
 
 var Slack = require('node-slack');
-var slack = new Slack("codeandomexico","token-not-needed");
+var slack = new Slack("codeandomexico",process.env.SLACK_TOKEN);
 
 app.use(logfmt.requestLogger());
 
