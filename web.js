@@ -1,5 +1,6 @@
 // web.js
 var express = require("express");
+var bodyParser = require('body-parser');
 var logfmt = require("logfmt");
 var app = express();
 
@@ -7,11 +8,19 @@ var Slack = require('node-slack');
 var slack = new Slack("codeandomexico",process.env.SLACK_TOKEN);
 
 app.use(logfmt.requestLogger());
+app.use(bodyParser());
 
 var MEMBERS = {"eduardo":"@eduardo"};
+var BOTNAME = "webhook";
 
-app.get('/', function(req, res) {
+app.post('/', function(req, res) {
     var reply = slack.respond(req.body,function(hook) {
+
+        if (hook.user_name == BOTNAME) {
+            return {
+                text: " "
+            };
+        }
 
         words = hook.text.split("\\s+");
 
