@@ -1,0 +1,24 @@
+{
+  "name": "mentioner",
+  "version": "0.0.1",
+  "description": "bot that mentions unmentioned user names for slack",
+  "main": "web.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "slack",
+    "bot",
+    "node",
+    "node-slack",
+    "mention",
+    "auto"
+  ],
+  "author": "Eduardo Salinas",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.0.0",
+    "logfmt": "^1.1.2",
+    "node-slack": "0.0.3"
+  }
+}
