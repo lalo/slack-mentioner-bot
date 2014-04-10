@@ -35,10 +35,19 @@ app.post('/', function(req, res) {
 
         words = hook.text.split(/\s+/g);
 
+        no_mention_needed = true;
+
         for (index = 0; index < words.length; ++index) {
             if (MEMBERS.hasOwnProperty(words[index].toLowerCase())) {
                 words[index] = MEMBERS[words[index].toLowerCase()];
+                no_mention_needed = false;
             }
+        }
+
+        if (no_mention_needed) {
+            return {
+                text: ""
+            };
         }
 
         return {
