@@ -18,7 +18,7 @@ app.post('/', function(req, res) {
 
         if (hook.user_name == BOTNAME) {
             return {
-                text: " "
+                text: ""
             };
         }
 
