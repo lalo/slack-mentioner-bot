@@ -10,7 +10,18 @@ var slack = new Slack("codeandomexico",process.env.SLACK_TOKEN);
 app.use(logfmt.requestLogger());
 app.use(bodyParser());
 
-var MEMBERS = {"eduardo":"@eduardo"};
+var MEMBERS = { "eduardo":"@eduardo",
+                "lalo":"@eduardo",
+                "adrian":"@adrian",
+                "braulio":"@braulio",
+                "pau":"@paulinabustosa",
+                "pualina":"@paulinabustosa",
+                "miguel":"@miguel",
+                "mike":"@miguel",
+                "juanpa":"@juanpabloe",
+                "poguez":"@poguez",
+                "juan":"@juanpabloe"
+              };
 var BOTNAME = "slackbot";
 
 app.post('/', function(req, res) {
