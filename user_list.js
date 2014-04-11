@@ -5,6 +5,7 @@ module.exports = {
     "braulio":"@braulio",
     "pau":"@paulinabustosa",
     "pualina":"@paulinabustosa",
+    "paulinabustosa":"@paulinabustosa",
     "miguel":"@miguel",
     "mike":"@miguel",
     "juanpa":"@juanpabloe",
