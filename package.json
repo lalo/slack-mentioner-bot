@@ -19,7 +19,7 @@
     "auto"
   ],
   "author": "Eduardo Salinas",
-  "license": “AGPLv3”,
+  "license": "AGPLv3",
   "dependencies": {
     "body-parser": "^1.0.1",
     "express": "^4.0.0",
