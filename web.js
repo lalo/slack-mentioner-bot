@@ -28,6 +28,17 @@ app.post('/', function(req, res) {
 
         words = hook.text.split(/\s+/g);
 
+        if (words[0] == "mentioner") {
+            if (words[1] == "add") {
+                MEMBERS[words[2].toLowerCase()] = words[3].toLowerCase();
+            }
+            else if (words[1] == "delete") {
+                if (MEMBERS.hasOwnProperty(words[2].toLowerCase())) {
+                    delete MEMBERS[words[2].toLowerCase()];
+                }
+            }
+        }
+
         no_mention_needed = true;
 
         for (index = 0; index < words.length; ++index) {
