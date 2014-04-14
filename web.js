@@ -10,6 +10,8 @@ var slack = new Slack("codeandomexico",process.env.SLACK_TOKEN);
 app.use(logfmt.requestLogger());
 app.use(bodyParser());
 
+var storage = require('node-persist');
+
 var MEMBERS = require("./user_list.js");
 
 var BOTNAME = "slackbot";

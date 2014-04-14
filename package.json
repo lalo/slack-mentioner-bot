@@ -24,6 +24,7 @@
     "body-parser": "^1.0.1",
     "express": "^4.0.0",
     "logfmt": "^1.1.2",
+    "node-persist": "0.0.2",
     "node-slack": "0.0.3"
   }
 }
