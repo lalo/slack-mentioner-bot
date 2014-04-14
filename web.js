@@ -11,8 +11,9 @@ app.use(logfmt.requestLogger());
 app.use(bodyParser());
 
 var storage = require('node-persist');
+storage.initSync();
 
-var MEMBERS = require("./user_list.js");
+var MEMBERS = storage.getItem('MEMBERS')
 
 var BOTNAME = "slackbot";
 
