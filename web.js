@@ -15,12 +15,16 @@ storage.initSync();
 
 var MEMBERS = storage.getItem('MEMBERS')
 
+if (typeof MEMBERS === 'undefined') {
+    MEMBERS = {};
+}
+
 var BOTNAME = "slackbot";
 
 app.post('/', function(req, res) {
     var reply = slack.respond(req.body,function(hook) {
 
-        if (hook.user_name == BOTNAME || typeof MEMBERS === 'undefined') {
+        if (hook.user_name == BOTNAME) {
             return {
                 text: ""
             };
