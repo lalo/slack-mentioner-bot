@@ -31,6 +31,7 @@ app.post('/', function(req, res) {
         }
 
         words = hook.text.split(/\s+/g);
+        no_mention_needed = true;
 
         if (words[0] == "mentioner") {
             if (words.length == 4 && words[1] == "add") {
@@ -44,13 +45,12 @@ app.post('/', function(req, res) {
                 }
             }
         }
-
-        no_mention_needed = true;
-
-        for (index = 0; index < words.length; ++index) {
-            if (MEMBERS.hasOwnProperty(words[index].toLowerCase())) {
-                words[index] = MEMBERS[words[index].toLowerCase()];
-                no_mention_needed = false;
+        else {
+            for (index = 0; index < words.length; ++index) {
+                if (MEMBERS.hasOwnProperty(words[index].toLowerCase())) {
+                    words[index] = MEMBERS[words[index].toLowerCase()];
+                    no_mention_needed = false;
+                }
             }
         }
 
