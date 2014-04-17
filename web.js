@@ -35,7 +35,7 @@ app.post('/', function(req, res) {
 
         if (words[0] == "mentioner") {
             if (words.length == 4 && words[1] == "add") {
-                MEMBERS[words[2].toLowerCase()] = words[3].toLowerCase();
+                MEMBERS[words[2].toLowerCase()] = "@"+words[3].toLowerCase();
                 storage.setItem('MEMBERS', MEMBERS);
             }
             else if (words.length == 3 && words[1] == "delete") {
